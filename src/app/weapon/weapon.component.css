@@ -1,0 +1,42 @@
+.weapon {
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  background-color: rgba(37, 37, 56, 0.582);
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+img {
+  width: 250px;
+  height: 200px;
+}
+
+.pie-foto {
+  align-self: center;
+  text-align: center;
+  margin-top: auto;
+  font-size: 0.9em;
+  color: #ffffff;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.weapon-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.stattrak {
+  color: orange;
+}
+
+.souvenir {
+  color: yellow;
+}

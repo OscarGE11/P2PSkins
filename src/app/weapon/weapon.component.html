@@ -1,0 +1,13 @@
+<section class="weapon">
+  <div class="weapon-data">
+    <span>{{ tradeDirection }}</span>
+    <img [src]="test[0].image" />
+  </div>
+  <div class="pie-foto" [ngClass]="{ stattrak: test[0].stattrak }">
+    @if(test[0].stattrak){
+    <span>StatTrak™ {{ test[0].name }}</span>
+    } @else if(test[0].souvenir) {
+    <span [ngClass]="{ souvenir: test[0].souvenir }">{{ test[0].name }}</span>
+    }
+  </div>
+</section>

@@ -1,0 +1,22 @@
+main {
+  margin-left: 200px;
+  margin-top: 20px;
+  overflow-x: hidden;
+  margin-right: 30px;
+}
+
+footer {
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 100px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
