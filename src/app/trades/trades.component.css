@@ -4,7 +4,6 @@ header {
 
 .container {
   padding-left: 20px;
-  height: fit-content;
   background-color: rgb(31, 31, 59);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
@@ -15,7 +14,10 @@ header {
   padding-bottom: 30px;
   padding-top: 10px;
   margin-bottom: 20px;
+  height: fit-content;
 }
 .view {
   margin-bottom: 60px;
+  box-sizing: border-box;
+  min-height: 800px;
 }

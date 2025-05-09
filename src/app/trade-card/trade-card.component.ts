@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { WeaponComponent } from '../weapon/weapon.component';
 import { Trade } from '../models/Trade';
 import { Weapon } from '../models/Weapon';
@@ -11,9 +11,10 @@ import { Weapon } from '../models/Weapon';
   styleUrl: './trade-card.component.css',
 })
 export class TradeCardComponent {
+  @Input({ required: true }) trade!: Trade;
   offered: boolean = true;
 
-  test: Weapon[] = [
+  /* test: Weapon[] = [
     {
       name: 'Desert Eagle | Urban DDPAT',
       rarity: 'Industrial Grade',
@@ -29,20 +30,5 @@ export class TradeCardComponent {
       stattrak: false,
       img: 'https://raw.githubusercontent.com/ByMykel/counter-strike-image-tracker/main/static/panorama/images/econ/default_generated/weapon_tec9_cu_tec9_asiimov_light_png.png',
     },
-  ];
-
-  newTrade: Trade = {
-    id: '1',
-    weapons: [
-      {
-        weapon: this.test[0],
-        offered: true,
-      },
-      {
-        weapon: this.test[1],
-        offered: false,
-      },
-    ],
-    creationDate: new Date(),
-  };
+  ]; */
 }

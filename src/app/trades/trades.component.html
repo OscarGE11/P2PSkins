@@ -4,7 +4,10 @@
   </header>
 
   <div class="container">
-    <app-trade-card></app-trade-card>
-    <app-trade-card></app-trade-card><app-trade-card></app-trade-card>
+    @if (trades.length > 0) { @for (trade of trades; track $index) {
+    <app-trade-card [trade]="trade"></app-trade-card>
+    } } @else {
+    <p>No trades!</p>
+    }
   </div>
 </div>

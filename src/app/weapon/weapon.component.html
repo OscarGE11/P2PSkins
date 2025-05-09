@@ -1,20 +1,19 @@
-<section class="weapon">
+<article
+  class="weapon"
+  [ngStyle]="{
+    'box-shadow': offered ? '0 0 10px #ffd700' : '0 0 10px #1e90ff'
+  }"
+>
   <div class="weapon-data">
-    @if (weapon.offered){
-
-    <span>Offered</span>
-    } @else { <span>Received</span> }
-    <img [src]="weapon.weapon.img" />
+    <img [src]="weapon.img" />
   </div>
-  <div class="pie-foto" [ngClass]="{ stattrak: weapon.weapon.stattrak }">
-    @if(weapon.weapon.stattrak){
-    <span>StatTrak™ {{ weapon.weapon.name }}</span>
-    } @else if(weapon.weapon.souvenir) {
-    <span [ngClass]="{ souvenir: weapon.weapon.souvenir }">{{
-      weapon.weapon.name
-    }}</span>
+  <div class="pie-foto" [ngClass]="{ stattrak: weapon.stattrak }">
+    @if(weapon.stattrak){
+    <span>StatTrak™ {{ weapon.name }}</span>
+    } @else if(weapon.souvenir) {
+    <span [ngClass]="{ souvenir: weapon.souvenir }">{{ weapon.name }}</span>
     } @else {
-    <span>{{ weapon.weapon.name }}</span>
+    <span [ngStyle]="{ color: weapon.rarity }">{{ weapon.name }}</span>
     }
   </div>
-</section>
+</article>

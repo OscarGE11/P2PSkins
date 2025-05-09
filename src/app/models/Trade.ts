@@ -6,7 +6,7 @@ export class Trade {
   receivedWeapon!: Weapon; */
   creationDate!: Date;
   weapons!: {
-    weapon: Weapon;
-    offered: boolean;
-  }[];
+    received: Weapon[];
+    offered: Weapon[];
+  };
 }

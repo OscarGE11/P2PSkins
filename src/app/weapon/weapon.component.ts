@@ -9,10 +9,9 @@ import { type Weapon } from '../models/Weapon';
   styleUrl: './weapon.component.css',
 })
 export class WeaponComponent implements OnInit {
-  @Input({ required: true }) weapon!: {
-    weapon: Weapon;
-    offered: boolean;
-  };
+  ngOnInit(): void {}
+  @Input({ required: true }) weapon!: Weapon;
+  @Input({ required: true }) offered!: boolean;
 
   test: Weapon[] = [
     {
@@ -23,7 +22,4 @@ export class WeaponComponent implements OnInit {
       stattrak: false,
     },
   ];
-  ngOnInit(): void {
-    console.log(this.weapon);
-  }
 }
