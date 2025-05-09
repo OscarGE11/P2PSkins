@@ -8,9 +8,4 @@ import { WeaponComponent } from '../weapon/weapon.component';
   templateUrl: './trade-card.component.html',
   styleUrl: './trade-card.component.css',
 })
-export class TradeCardComponent {
-  awp: { src: string; name: string } = {
-    src: 'AWP.webp',
-    name: 'AWP | Printstream',
-  };
-}
+export class TradeCardComponent {}
