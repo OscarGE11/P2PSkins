@@ -1,9 +1,46 @@
-.date {
+.header {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: 0;
+  right: 30px;
   font-size: 0.9rem;
   opacity: 0.7;
+}
+
+.delete {
+  position: relative;
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  background-color: #6578b9;
+  border-radius: 50px;
+  border: none;
+  padding: 5px;
+  left: 15px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.add {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  right: 15px;
+  border-radius: 50px;
+  border: none;
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  background-color: #6578b9;
+  cursor: pointer;
+  text-align: center;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.add img {
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
 
 .trade {
@@ -15,8 +52,6 @@
   background-color: rgb(31, 31, 53);
   justify-content: space-around;
   margin: 20px;
-  margin-right: 0;
-  margin-left: 0;
   height: fit-content;
   padding-bottom: 20px;
   position: relative;
@@ -31,7 +66,6 @@ main {
 .swap-arrow {
   width: 150px;
   height: auto;
-  margin-right: 20px;
   align-self: center;
   filter: brightness(0.8);
   transform: rotate(180deg);
@@ -44,12 +78,26 @@ main {
   gap: 23px;
 }
 .offers {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+}
+
+.offers-items.offered {
+  margin-left: 20px;
+  justify-content: start;
   align-items: center;
   text-align: center;
-  margin: auto;
-  margin-top: -5px;
-  margin-left: 15px;
+}
+
+h4 {
+  text-align: center;
+}
+
+.offers-items.received {
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+  align-items: center;
+  text-align: center;
 }
