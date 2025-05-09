@@ -44,13 +44,13 @@
 }
 
 .trade {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(128, 128, 128, 0.13);
   /* padding: 10px; */
   border-radius: 20px;
   background-color: rgb(31, 31, 53);
-  justify-content: space-around;
   margin: 20px;
   height: fit-content;
   padding-bottom: 20px;
@@ -64,11 +64,14 @@ main {
 }
 
 .swap-arrow {
+  display: flex;
+  max-width: 1000px;
   width: 150px;
   height: auto;
   align-self: center;
-  filter: brightness(0.8);
   transform: rotate(180deg);
+  align-items: center;
+  justify-content: center;
 }
 
 .offers-items {
@@ -81,6 +84,7 @@ main {
   margin-top: 10px;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .offers-items.offered {
@@ -94,10 +98,21 @@ h4 {
   text-align: center;
 }
 
-.offers-items.received {
+/* .offers-items.received {
+  display: flex;
+  justify-content: start;
+  margin-left: 20px;
+  align-items: center;
+}
+ */
+.center {
   display: flex;
   justify-content: center;
-  margin-right: 20px;
   align-items: center;
-  text-align: center;
+}
+
+.start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

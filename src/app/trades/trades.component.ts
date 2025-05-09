@@ -33,7 +33,7 @@ export class TradesComponent {
       id: '1',
       weapons: {
         offered: [this.test[1], this.test[1], this.test[1]],
-        received: [this.test[0], this.test[0], this.test[0], this.test[0]],
+        received: [this.test[0]],
       },
       creationDate: new Date(),
     },

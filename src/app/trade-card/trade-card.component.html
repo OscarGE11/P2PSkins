@@ -39,7 +39,7 @@
   </header>
   <div class="offers">
     <h4 [ngStyle]="{ color: '#ffd700' }">Offered</h4>
-    <div class="offers-items offered">
+    <div class="offers-items center">
       @for (offered of trade.weapons.offered; let i = $index; track $index) {
       <app-weapon [weapon]="offered" [offered]="true" />
       }
@@ -50,7 +50,7 @@
   </main>
   <div class="offers">
     <h4 [ngStyle]="{ color: '#1e90ff' }">Received</h4>
-    <div class="offers-items received">
+    <div class="offers-items center">
       @for (received of trade.weapons.received; let i = $index; track $index) {
       <app-weapon [weapon]="received" [offered]="false" />
       }
