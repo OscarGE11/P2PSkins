@@ -9,6 +9,13 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   height: 160px;
   justify-content: space-between;
+  transition: transform 0.3s ease;
+  min-width: 210px;
+}
+
+.weapon:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 img {
@@ -22,7 +29,7 @@ img {
   font-size: 0.9em;
   color: #ffffff;
   margin-top: 5px;
-  padding-bottom:10px;
+  padding-bottom: 10px;
 }
 
 .weapon-data {

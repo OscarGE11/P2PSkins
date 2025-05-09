@@ -3,8 +3,8 @@
     <span>12-09-2025</span>
   </header>
   <main>
-    <app-weapon tradeDirection="Offers" />
+    <app-weapon [weapon]="newTrade.weapons[0]" />
     <img src="flecha.png" />
-    <app-weapon tradeDirection="Receive" />
+    <app-weapon [weapon]="newTrade.weapons[1]" />
   </main>
 </div>
