@@ -3,10 +3,12 @@ import { Component, Input } from '@angular/core';
 import { WeaponComponent } from '../weapon/weapon.component';
 import { Trade } from '../models/Trade';
 import { Weapon } from '../models/Weapon';
+import { LateralMenuComponent } from '../lateral-menu/lateral-menu.component';
+import { OffersContainerComponent } from '../offers-container/offers-container.component';
 
 @Component({
   selector: 'app-trade-card',
-  imports: [CommonModule, WeaponComponent],
+  imports: [CommonModule, WeaponComponent, OffersContainerComponent],
   templateUrl: './trade-card.component.html',
   styleUrl: './trade-card.component.css',
 })

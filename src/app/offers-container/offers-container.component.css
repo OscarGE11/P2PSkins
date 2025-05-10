@@ -1,0 +1,18 @@
+.offers-items {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  gap: 23px;
+}
+.offers {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
