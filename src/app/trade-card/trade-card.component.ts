@@ -5,16 +5,23 @@ import { Trade } from '../models/Trade';
 import { Weapon } from '../models/Weapon';
 import { LateralMenuComponent } from '../lateral-menu/lateral-menu.component';
 import { OffersContainerComponent } from '../offers-container/offers-container.component';
+import { AddTradeModalComponent } from '../add-trade-modal/add-trade-modal.component';
 
 @Component({
   selector: 'app-trade-card',
-  imports: [CommonModule, WeaponComponent, OffersContainerComponent],
+  imports: [
+    CommonModule,
+    WeaponComponent,
+    OffersContainerComponent,
+    AddTradeModalComponent,
+  ],
   templateUrl: './trade-card.component.html',
   styleUrl: './trade-card.component.css',
 })
 export class TradeCardComponent {
   @Input({ required: true }) trade!: Trade;
   offered: boolean = true;
+  addingTrade: boolean = false;
 
   /* test: Weapon[] = [
     {
@@ -33,4 +40,11 @@ export class TradeCardComponent {
       img: 'https://raw.githubusercontent.com/ByMykel/counter-strike-image-tracker/main/static/panorama/images/econ/default_generated/weapon_tec9_cu_tec9_asiimov_light_png.png',
     },
   ]; */
+
+  openAddModal() {
+    this.addingTrade = true;
+  }
+  onCloseModal() {
+    this.addingTrade = false;
+  }
 }

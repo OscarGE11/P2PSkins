@@ -55,12 +55,17 @@
   height: fit-content;
   padding-bottom: 20px;
   position: relative;
+  align-items: stretch;
+  height: auto;
 }
 
-main {
+.arrow {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  margin-top: 30px;
 }
 
 .swap-arrow {
@@ -70,14 +75,13 @@ main {
   height: auto;
   align-self: center;
   transform: rotate(180deg);
-  align-items: center;
   justify-content: center;
+  align-self: center;
 }
 
 .offers-items {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1000px;
   gap: 23px;
 }
 .offers {

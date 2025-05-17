@@ -1,4 +1,4 @@
-<button class="add" tooltip="Añadir">
+<button class="add" tooltip="Añadir" (click)="openAddModal()">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="20"
@@ -43,9 +43,9 @@
       <app-weapon [weapon]="offered" [offered]="true" />}</app-offers-container
     >
   </div>
-  <main>
+  <div class="arrow">
     <img src="flecha.png" alt="Swap arrow" class="swap-arrow" />
-  </main>
+  </div>
   <div class="offers">
     <app-offers-container title="Received" color="#1e90ff"
       >@for (received of trade.weapons.received; let i = $index; track $index) {
@@ -56,3 +56,6 @@
     >
   </div>
 </div>
+@if (addingTrade) {
+<app-add-trade-modal (closeModal)="onCloseModal()" />
+}

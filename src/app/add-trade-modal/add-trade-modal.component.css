@@ -1,0 +1,29 @@
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+dialog {
+  width: 90%;
+  max-width: 30rem;
+  background-color: rgb(47, 47, 92);
+  border-radius: 6px;
+  border: none;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+  color: rgb(155, 164, 184);
+  overflow: hidden;
+  padding: 1rem;
+  top: 5rem;
+}
+
+.times {
+  position: absolute;
+  top: 0.1rem;
+  right: 1rem;
+  font-size: 40px;
+  cursor: pointer;
+}
