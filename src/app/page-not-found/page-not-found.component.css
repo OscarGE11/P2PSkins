@@ -1,0 +1,20 @@
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-self: center;
+  height: 90vh;
+  font-size: 35px;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  background: linear-gradient(10deg, #6a5acd, #8a2be2, #adb5ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}

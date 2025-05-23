@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
 import { LateralMenuComponent } from './lateral-menu/lateral-menu.component';
 
 @Component({
@@ -9,5 +9,9 @@ import { LateralMenuComponent } from './lateral-menu/lateral-menu.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'CSGOSkins';
+  constructor(private router: Router, private route: ActivatedRoute) {}
+
+  get isPageNotFound(): boolean {
+    return this.router.url === '/404';
+  }
 }
