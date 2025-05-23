@@ -1,59 +1,33 @@
+
 # P2PSkins
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.6.
+This project is a very simple prototype based on an idea I had: a peer-to-peer skin trading platform without bots or taxes involved. Itâ€™s a basic concept, but it shows how such a platform could look and function on the frontend.
 
-## Development server
+## Requirements
 
-To start a local development server, run:
+- **Node.js** (LTS version 22 or higher)
+- **Angular** (version 18 or higher)
 
-```bash
-ng serve
-```
+## Installation
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+1. Clone or download the project from this repository:  
+   [https://github.com/OscarGE11/P2PSkins](https://github.com/OscarGE11/P2PSkins)
 
-## Code scaffolding
+2. Install the dependencies:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+   ```bash
+   npm install
+   ```
 
-```bash
-ng generate component component-name
-```
+3. Start the development server:
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+   ```bash
+   ng serve
+   ```
 
-```bash
-ng generate --help
-```
+Then open your browser at `http://localhost:4200`.
 
-## Building
+## Notes
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+This is not a finished product or a commercial project. 
+Feel free to explore or fork the code.
