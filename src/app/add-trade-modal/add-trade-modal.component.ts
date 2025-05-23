@@ -3,10 +3,11 @@ import { mapToWeapon } from '../utils/mapToWeapon';
 import { Weapon } from '../models/Weapon';
 import { SkinsService } from '../services/skins.service';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-add-trade-modal',
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './add-trade-modal.component.html',
   styleUrl: './add-trade-modal.component.css',
 })
@@ -44,5 +45,13 @@ export class AddTradeModalComponent implements OnInit {
       offered: [this.offeredWeapon],
     });
     this.onCloseModal();
+  }
+
+  get isTradeInvalid(): boolean {
+    return (
+      !this.offeredWeapon ||
+      !this.desiredWeapon ||
+      this.offeredWeapon === this.desiredWeapon
+    );
   }
 }

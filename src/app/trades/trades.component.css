@@ -37,17 +37,11 @@ header {
   text-align: center;
   align-items: center;
   justify-content: center;
-  top: 70px;
+  top: 65px;
   padding: 8px;
   z-index: 100;
   font-size: 14px;
   transition: background-color 0.3s ease;
-}
-
-.add img {
-  display: flex;
-  text-align: center;
-  justify-content: center;
 }
 
 .add:hover {

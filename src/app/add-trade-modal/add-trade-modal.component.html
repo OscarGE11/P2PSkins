@@ -7,19 +7,26 @@
     <span>Cargando...</span>
     } @else {
     <label for="weapon">Offered Weapons</label>
-    <select [(ngModel)]="offeredWeapon" name="offeredWeapon">
+    <select [(ngModel)]="offeredWeapon" name="offeredWeapon" required>
       @for (item of weapons; track $index) {
-      <option [ngValue]="item" required="true">{{ item.name }}</option>
+      <option [ngValue]="item">{{ item.name }}</option>
       }
     </select>
 
     <label for="weapon">Desired Weapons</label>
-    <select [(ngModel)]="desiredWeapon" name="desiredWeapon">
+    <select [(ngModel)]="desiredWeapon" name="desiredWeapon" required>
       @for (item of weapons; track $index) {
-      <option [ngValue]="item" required="true">{{ item.name }}</option>
+      <option [ngValue]="item">{{ item.name }}</option>
       }
     </select>
     }
-    <p><button>Add trade</button></p>
+    <div
+      class="button-container"
+      [ngClass]="{
+        disabled: isTradeInvalid
+      }"
+    >
+      <button [disabled]="isTradeInvalid">Add trade</button>
+    </div>
   </form>
 </dialog>
