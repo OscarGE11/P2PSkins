@@ -1,3 +1,4 @@
+@if (weapon) {
 <article
   class="weapon"
   [ngStyle]="{
@@ -5,15 +6,27 @@
   }"
 >
   <div class="weapon-data">
-    <img [src]="weapon.img" />
+    <img [src]="weapon.img" alt="a weapon img" />
   </div>
-  <div class="pie-foto" [ngClass]="{ stattrak: weapon.stattrak }">
-    @if(weapon.stattrak){
-    <span>StatTrak™ {{ weapon.name }}</span>
-    } @else if(weapon.souvenir) {
+  <div class="pie-foto">
+    @if(weapon.souvenir) {
     <span [ngClass]="{ souvenir: weapon.souvenir }">{{ weapon.name }}</span>
     } @else {
     <span [ngStyle]="{ color: weapon.rarity }">{{ weapon.name }}</span>
     }
   </div>
 </article>
+
+} @else {
+<article
+  class="weapon"
+  [ngStyle]="{
+    'box-shadow': offered ? '0 0 10px #ffd700' : '0 0 10px #1e90ff'
+  }"
+>
+  <div class="weapon-data">
+    <img [src]="" alt="a" />
+  </div>
+  <div class="pie-foto"></div>
+</article>
+}

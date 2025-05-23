@@ -10,7 +10,12 @@ import { type Weapon } from '../models/Weapon';
 })
 export class WeaponComponent implements OnInit {
   ngOnInit(): void {}
-  @Input({ required: true }) weapon!: Weapon;
+  @Input() weapon: Weapon = {
+    name: '',
+    img: '',
+    souvenir: false,
+    stattrak: false,
+  };
   @Input({ required: true }) offered!: boolean;
 
   test: Weapon[] = [

@@ -21,3 +21,35 @@ header {
   box-sizing: border-box;
   min-height: 800px;
 }
+
+.add {
+  display: flex;
+  width: auto;
+  height: auto;
+  position: fixed;
+  right: 5px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  background-color: #6578b9;
+  cursor: pointer;
+  text-align: center;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  top: 70px;
+  padding: 8px;
+  z-index: 100;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.add img {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.add:hover {
+  background-color: #6579b9c2;
+}

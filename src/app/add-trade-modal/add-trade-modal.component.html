@@ -2,10 +2,24 @@
 <dialog open>
   <span class="times" (click)="onCloseModal()">&times;</span>
   <h2>New trade</h2>
-  <form>
-    <label for="weapon">Weapon</label>
-    <select name="" id="">
-      <option value="hi">Hi</option>
+  <form (submit)="onSubmit()">
+    @if (isLoading) {
+    <span>Cargando...</span>
+    } @else {
+    <label for="weapon">Offered Weapons</label>
+    <select [(ngModel)]="offeredWeapon" name="offeredWeapon">
+      @for (item of weapons; track $index) {
+      <option [ngValue]="item" required="true">{{ item.name }}</option>
+      }
     </select>
+
+    <label for="weapon">Desired Weapons</label>
+    <select [(ngModel)]="desiredWeapon" name="desiredWeapon">
+      @for (item of weapons; track $index) {
+      <option [ngValue]="item" required="true">{{ item.name }}</option>
+      }
+    </select>
+    }
+    <p><button>Add trade</button></p>
   </form>
 </dialog>

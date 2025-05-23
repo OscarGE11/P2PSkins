@@ -1,3 +1,7 @@
+<button class="add" title="Add a new trade" (click)="openAddModal()">
+  Add Trade!
+</button>
+
 <div class="view">
   <header>
     <h1>{{ title }}</h1>
@@ -5,9 +9,19 @@
 
   <div class="container">
     @if (trades.length > 0) { @for (trade of trades; track $index) {
-    <app-trade-card [trade]="trade"></app-trade-card>
+    <app-trade-card
+      (deleteTrade)="onDeleteTrade($event)"
+      [trade]="trade"
+    ></app-trade-card>
     } } @else {
     <p>No trades!</p>
     }
   </div>
 </div>
+
+@if (addingTrade) {
+<app-add-trade-modal
+  (sendWeapons)="newTrade($event)"
+  (closeModal)="onCloseModal()"
+/>
+}

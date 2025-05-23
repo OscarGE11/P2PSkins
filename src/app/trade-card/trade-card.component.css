@@ -19,30 +19,6 @@
   cursor: pointer;
 }
 
-.add {
-  display: flex;
-  width: 30px;
-  height: 30px;
-  position: fixed;
-  right: 15px;
-  border-radius: 50px;
-  border: none;
-  font-family: "Quicksand", sans-serif;
-  color: white;
-  background-color: #6578b9;
-  cursor: pointer;
-  text-align: center;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-
-.add img {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-}
-
 .trade {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
